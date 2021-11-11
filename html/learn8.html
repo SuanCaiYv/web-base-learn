@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARN-8</title>
+    <style>
+        /**
+        请读者不要慌，我小用了CSS来规划表格样式，后面我会细说CSS用法的
+        */
+        table {
+            border: 1px solid;
+        }
+        th {
+            border: 1px solid;
+        }
+        td {
+            border: 1px solid;
+        }
+        #col1 {
+            background-color: rgb(255, 183, 183);
+        }
+    </style>
+</head>
+<body>
+    <p>现在我们来试试表格，通过它我们可以更好地规划元素</p>
+    <p>th用来做表格标题哦！它除了看起来更加醒目和重要外，和td是一样的</p>
+    <table>
+        <tr>
+            <th>我是第一个标题</th>
+            <th>我是第二个标题</th>
+            <th>我是第三个标题</th>
+        </tr>
+        <tr>
+            <td>aaa</td>
+            <td>bbb</td>
+            <td>ccc</td>
+        </tr>
+        <tr>
+            <td>ddd</td>
+            <td>eee</td>
+            <td>fff</td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th>第一个标题吼吼</th>
+            <th>第二个标题吼吼</th>
+            <th>第三个标题吼吼</th>
+        </tr>
+        <tr>
+            <td colspan="2">我通过colspan跨越两个单元格</td>
+            <td>aaa</td>
+        </tr>
+        <tr>
+            <td rowspan="2">我通过rowspan跨越两个单元格</td>
+            <td>bbb</td>
+            <td>ccc</td>
+        </tr>
+        <tr>
+            <td>ddd</td>
+            <td>eee</td>
+        </tr>
+    </table>
+    <hr>
+    <p>现在我们来看看，怎么实现多列格式设置，注意是多列，不是多行，因为表格默认按照行组织</p>
+    <table>
+        <colgroup>
+            <!--看到了嘛，这个和编写顺序有关-->
+            <col>
+            <col id="col1" span="1">
+            <col>
+        </colgroup>
+        <tr>
+            <th>我是第一个标题</th>
+            <th>我是第二个标题</th>
+            <th>我是第三个标题</th>
+        </tr>
+        <tr>
+            <td>aaa</td>
+            <td>bbb</td>
+            <td>ccc</td>
+        </tr>
+        <tr>
+            <td>ddd</td>
+            <td>eee</td>
+            <td>fff</td>
+        </tr>
+    </table>
+    <p>colgroup里面的col子元素有一个span属性，指出会顺带把后面的多少列一并渲染，默认是1</p>
+</body>
+</html>
