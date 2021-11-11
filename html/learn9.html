@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARN-9</title>
+    <style>
+        th {
+            border: 1px solid;
+        }
+        td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <p>现在我们来看一些高级的表格用法</p>
+    <p>首先是为表格填加一个标题，然后使用thead设置表格头，使用tfoot设置表格尾。tbody可以不写，因为会被浏览器默认添加。</p>
+    <p>这里建议thead写在最前面，但是可以后于colgroup这种元素，我们把标题写在thead里面</p>
+    <table>
+        <caption>我是一个测试表格啦～</caption>
+        <thead>
+            <tr>
+                <th>我是第一个标题啦～</th>
+                <th>我是第二个标题啦～</th>
+                <th>我是第三个标题啦～</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>aaa</td>
+                <td>bbb</td>
+                <td>ccc</td>
+            </tr>
+            <tr>
+                <td>ddd</td>
+                <td>eee</td>
+                <td>fff</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">我是表格尾啦～</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+    <p>Mozilla在这里建议我们指出行标题和列标题，方便阅读器识别，因为世界上有很多人视力障碍，我们要为了他们考虑，谢谢🙏。</p>
+    <p>简单通过设置th的scope属性来完成标题指定</p>
+    <table>
+        <tr>
+            <th></th>
+            <th scope="col">列标题一</th>
+            <th scope="col">列标题二</th>
+            <th scope="col">列标题三</th>
+        </tr>
+        <tr>
+            <th scope="row">行标题一</th>
+            <td>aaa</td>
+            <td>bbb</td>
+            <td>ccc</td>
+        </tr>
+        <tr>
+            <th scope="row">行标题二</th>
+            <td>ddd</td>
+            <td>eee</td>
+            <td>fff</td>
+        </tr>
+    </table>
+</body>
+</html>
