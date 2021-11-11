@@ -1,50 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEARN-6</title>
-    <style>
-        #img-base {
-            /**指定基准图片大小*/
-            width: 320px;
-        }
-    </style>
+    <title>Document</title>
 </head>
-
 <body>
-    <p>现在我们来看看自适应图片的一种实现方式：分辨率切换</p>
-    <p>(注意哈！图片集和大小是一一对应的)</p>
-    <img srcset="
-    ./static/IMG_8942.jpg 155w,
-    ./static/IMG_8921.jpg 372w,
-    ./static/IMG_8950.jpg 1125w
-    " sizes="
-    (max-height: 160px) 100px,
-    (max-height: 372px) 200px,
-    1125px
-    " src="./static/life.JPG" alt="">
-    <p>你可以调整页面高度来查看效果</p>
-    <p>在这里我们依旧放置了src是用来兼容老浏览器，以防它们不支持此自适应图片</p>
-    <p>第二种自适应图片是比例放大，既以第一个图片大小为基准，当页面大小变化时，会触发相应的图片</p>
-    <p>所以这里我们需要指定基本图片的大小——通过CSS来完成</p>
-    <img id="img-base" srcset="
-    ./static/IMG_8942.jpg,
-    ./static/IMG_8921.jpg 2x,
-    ./static/IMG_8950.jpg 4x
-    " src="./static/IMG_8942.jpg" alt="">
-    <p>调整页面大小查看效果哦～</p>
-    <p>最后我们来看看，使用picture来实现自适应图片</p>
-    <picture>
-        <!--media里面是表达式，当条件为真时触发这一项-->
-        <source media="(max-width: 372px)" srcset="./static/IMG_8942.jpg">
-        <source media="(max-width: 1125px)" srcset="./static/IMG_8921.jpg">
-        <source media="(max-width: 4096px)" srcset="./static/IMG_8950.jpg">
-        <img src="./static/life.JPG" alt="">
-    </picture>
-    <p>注意哈！你必须提供一个img在picture结束之前，不然不会触发效果</p>
+    
 </body>
-
 </html>
