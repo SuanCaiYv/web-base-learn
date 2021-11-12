@@ -1,0 +1,17 @@
+li {
+    color: rgb(225, 125, 255);
+}
+
+/**
+.开头的名称指定一个类名
+*/
+.class1 {
+    color: pink;
+}
+
+/**
+符合以下元素组合规则的会应用此样式
+*/
+article section {
+    color: green;
+}
