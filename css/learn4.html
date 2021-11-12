@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARN-4</title>
+    <link rel="stylesheet" href="./learn4.css">
+</head>
+<body>
+    <p>CSS有三个冲突规则：</p>
+    <ul>
+        <li>
+            层叠：优先级相同时，写在后面的规则会覆盖前面的规则
+        </li>
+        <li>
+            优先级：更加特例化的CSS规则会覆盖泛型化的CSS规则
+        </li>
+        <li>
+            继承：子元素会继承父元素的CSS规则，注意⚠️，这不是全部CSS属性都会的，仅部分CSS属性会被继承
+        </li>
+    </ul>
+    <p>我们来看一个继承的例子</p>
+    <article id="id1">
+        我是父元素
+        <section>我是子元素，我的颜色继承自父元素</section>
+    </article>
+    <p>我们也开手动关闭/开启继承——通过设置子元素的CSS属性的值为：inherit, initial, unset之一</p>
+    <article id="id1">
+        我是父元素
+        <section id="id2">我是子元素(规则详见注释)</section>
+    </article>
+    <p>同时可以直接在CSS中使用all属性指出对这个CSS的所有属性应用哪种继承原则</p>
+    <p>现在来理解层叠</p>
+    <p>层叠存在优先级这一说，具体的选择器优先级大于宽泛的选择器，而无论它们的位置</p>
+    <p>选择器优先级计算规则见<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#理解层叠">这里</a>；简而言之，
+        ID选择器 > 类选择器 > 元素选择器。
+    </p>
+    <p>最后，!important属性值可以忽略优先级，从而调整到最高优先级</p>
+</body>
+</html>

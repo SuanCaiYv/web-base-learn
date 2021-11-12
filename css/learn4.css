@@ -1,0 +1,12 @@
+#id1 {
+    color: green;
+}
+
+/**
+inherit指出继承父元素此属性的值
+initial指出按照浏览器默认行为进行，当然，如果浏览器没有这一属性默认值则会成为inherit
+unset表示如果属性是可被继承的，那效果和inherit一样，否则和initial一样
+*/
+#id2 {
+    color: initial
+}
