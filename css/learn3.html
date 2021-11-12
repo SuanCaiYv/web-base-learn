@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEARN-3</title>
 </head>
+
 <body>
-    
+    <article>
+        <section>
+            来看看实际的CSS被应用过程：
+        </section>
+        <section>
+            <ol>
+                <li>浏览器加载HTML文件，并转换成DOM（后面解释，暂时理解成一个对象）</li>
+                <li>加载其他静态资源，比如CSS，图片，视频等</li>
+                <li>解析CSS，根据<strong>选择器</strong>划分出不同的桶(Bucket)，每个桶内部是同一选择器下的不同CSS实例</li>
+                <li>把每一个桶应用到DOM中对应的节点上，这一步成为渲染(Render)</li>
+                <li>显示在屏幕上，这一步称为着色</li>
+            </ol>
+        </section>
+        <section>
+            <p>什么是DOM呢？DOM是文档对象模型的缩写。简单来说，它是XML，HTML等文件在内存中的表现形式。</p>
+            <p>通过把文档加载进内存，执行语法解析，得到一个树形结构（想想看，HTML和XML都有层级结构，像不像一棵树？）并且把这个树形结构
+                使用一个可访问可编辑对象来表示，这个对象就是DOM对象。
+            </p>
+        </section>
+    </article>
 </body>
+
 </html>
