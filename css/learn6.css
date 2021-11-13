@@ -1,0 +1,15 @@
+#id1 {
+    width: 270px;
+    height: 180px;
+    background-color: pink;
+    padding: 30px;
+    border: solid black 3px;
+    margin: 30px;
+}
+
+#id2 {
+    box-sizing: border-box;
+    width: 270px;
+    height: 180px;
+    background-color: green;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARN-6</title>
+    <link rel="stylesheet" href="learn6.css">
+</head>
+<body>
+    <p>现在来学习CSS的盒模型，简而言之，就是任何一个元素都处于一个盒子中，我们平时
+        可见的文本存放在content区域中；
+        <br>
+        这个区域外边还有一个被称为内边距(padding)的区域，内边距的外边
+        有一个称为边框(border)的区域，边框外面有一个称为外边距(margin)的区域；
+        <br>
+        content区域是一个长方形，
+        大小由width和height指定。然后外面套一个长方形，即内边距，以此类推...
+    </p>
+    <p>看图</p>
+    <img src="./static/box-model.png" alt="">
+    <p>一个标准的盒模型如上所述，设定width和height仅仅指出了content的大小，然后还需要指定剩下三个区域</p>
+    <p>我仅做分隔用</p>
+    <p id="id1">
+        我是文本，我的width=270px，height=180px；
+        我的内边距是30px，边框是3px，外边距是30px
+    </p>
+    <p>我仅做分隔用</p>
+    <p>此外，每次都指定内外边距和边框多少有点麻烦了，所以我们有一种替代的盒模型，每次你指定的都是整体的大小</p>
+    <p>来看看</p>
+    <p>我仅做分隔用</p>
+    <p id="id2">我是文本，我的width=270px，height=180px，但是我是替代盒模型</p>
+    <p>我仅做分隔用</p>
+    <p>CSS盒模型的盒子一般分为两种：块级盒模型和内联盒模型，来看看它们的不同</p>
+    <p>块级：</p>
+    <ol>
+        <li>width和height会生效</li>
+        <li>会在新的一行生效</li>
+        <li>内边距，外边距，边框会生效，且会在上下左右四个方向把其他内容推开</li>
+    </ol>
+    <p>内联：</p>
+    <ol>
+        <li>width和height不会生效</li>
+        <li>会在当前行继续(即，不会新开一行)</li>
+        <li>上下方向的内边距，外边距，边框生效但是不推开其他内容；左右方向的生效且会推开</li>
+    </ol>
+    <p>当然，可以通过制定display属性设定盒子类型，块级为block，内联为inline。
+        <br>
+        这两个称为外部显示类型，即盒子怎么影响周围的其他内容的。
+        <br>
+        所以我们还有内部显示类型，即当前元素的子元素的受影响方式，可以指定display为flex，
+        这会让外部显示类型为block，但是子元素为flex，即弹性盒子，后面会讲一下。
+    </p>
+    <p>外边距除了直接使用margin指定四个方向的大小，还可以细化，使用margin-top/bottom/left/right来指定</p>
+    <p>外边距存在一种叫做外边距折叠的行为，因为外边距实现的是与元素之间的隔离，所以如果两个外边距相遇，会以大的哪个为准，这样两个都可以实现想要隔离的大小。</p>
+    <p>内边距和外边距差不多，除了没有折叠这一说，其他的上下左右控制都是一样设置。</p>
+    <p>边框除了上下左右，还多了宽度，样式，颜色的设置，分别是border-width/style/color。想要细化再加上top/bottom/left/right即可。</p>
+    <p>最后，display的inline-block会实现不换行但是推开周围内容的效果。</p>
+</body>
+</html>
