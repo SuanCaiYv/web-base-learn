@@ -4,3 +4,39 @@
     height: 30px;
     padding: 20px;
 }
+
+#id2 {
+    width: 1024px;
+    height: 1024px;
+    background-image: url(./static/bg.png);
+    /**
+    repeat-x/y指出方向上的重复，没有的话就是两个方向都重复
+    */
+    background-repeat: repeat-x;
+    /**
+    cover/contain有着不同的作用。
+    cover会做到完全覆盖，所以超出的部分会被割离；contain强调不切割，所以会有一边留下空隙。
+    */
+    background-size: cover;
+    /**
+    position会指出背景图像的起始位置，除了使用top,center,left等关键词，还可以使用带有单位的长度或者百分比
+    */
+    background-position: top left;
+    /**
+    这里需要说明，背景图像还可以有多个，覆盖顺序为写在前面的会覆盖写在后面的，即在图层最上面。
+    */
+    /**
+    此属性会指出，当页面滚动时，背景的行为；比如scroll指出背景随着页面滚动，但是不随着元素滚动；
+    fixed指出不随任何滚动，始终处于屏幕同一位置
+    local指出随着元素滚动
+    */
+    background-attachment: scroll;
+}
+
+#id3 {
+    border: 3px solid pink;
+    padding: 10px;
+    width: 90px;
+    height: 90px;
+    margin: 10px;
+}
