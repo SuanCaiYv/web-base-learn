@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARN-11</title>
+    <link rel="stylesheet" href="./learn11.css">
+</head>
+<body>
+    <p>对于图像溢出的处理，可以使用max-width/height来进行限制达到效果。</p>
+    <p>或者说我们可以使用object-fit属性来设置img元素，以此达到我们想要的填充效果。</p>
+    <p>下面我们来分别看看这几种情况：</p>
+    <p>(顺口一提，这是我拍的，图是1:2的。</p>
+    <ul>
+        <li>
+            首先是max-width = 300px。
+            <br>
+            <img src="./static/IMG_0853.jpg" alt="" id="id1">
+        </li>
+        <li>
+            然后是max-height。
+            <br>
+            <img src="./static/IMG_0853.jpg" alt="" id="id2">
+        </li>
+        <li>
+            接着是object-fit: cover
+            <br>
+            (故意设置一个2:3的框
+            <br>
+            <img src="./static/IMG_0853.jpg" alt="" id="id3">
+        </li>
+        <li>
+            继续，object-fit: contain
+            <br>
+            (依旧是2:3
+            <br>
+            <img src="./static/IMG_0853.jpg" alt="" id="id4">
+        </li>
+        <li>
+            最后，是强制拉伸效果，object-fit: fill
+            <br>
+            <img src="./static/IMG_0853.jpg" alt="" id="id5">
+        </li>
+    </ul>
+    <p>最后，MDN建议我们给整个网站整一个通用表单样式，这个样式里，内外边距全部被置0，然后在需要的地方进行特例化。
+        <br>
+        此外，表单默认无法继承上层元素字体风格，所以如果你想在输入区域实现字体效果，请显式开启继承效果，即设置font-family: inherit。
+    </p>
+</body>
+</html>
