@@ -1,0 +1,15 @@
+#id1 {
+    width: 50px;
+    height: 50px;
+    border: 2px solid pink;
+}
+
+#id2 {
+    width: 50px;
+    height: 50px;
+    border: 2px solid green;
+    /**
+    overflow-x/y指定滚动方向
+    */
+    overflow: scroll;
+}

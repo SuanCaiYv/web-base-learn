@@ -5,8 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEARN-8</title>
+    <link rel="stylesheet" href="./learn8.css">
 </head>
 <body>
-    
+    <p>现在我们来学习滚动。哦不，溢出，就是盒子太小了，字太多了，怎么办。</p>
+    <p>首先来看默认情况：</p>
+    <p id="id1">我是一堆汉字，我有好多好多，好多好多，好多好多哦～
+        你以为我只会说“好多吗？”嘿！我还有好多好多字！</p>
+    <hr>
+    <p>我是分割线</p>
+    <hr>
+    <p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        肉眼可见的越界了，不是吗？那么怎么解决呢？我们不妨试试添加滚动条
+    </p>
+    <p id="id2">我是一堆汉字，我有好多好多，好多好多，好多好多哦～
+        你以为我只会说“好多吗？”嘿！我还有好多好多字！</p>
+    <p>此时可以看到添加滚动条可以实现滚动效果，把内容缩在盒子里，同时不丢失。说到不丢失，不得不说另一种处理方式。
+        <br>
+        我们也可以使用hidden作为overflow属性的值，这样就可以实现对溢出内容的隐藏，不过这不是很好，因为会丢失数据。
+        <br>
+        最后，我们也可以使用auto来进行自动判断，仅在空间不够时触发滚动效果。
+    </p>
+    <p>如果是处理长单词，建议使用word-break或者overflow-wrap属性设置。</p>
 </body>
 </html>
