@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARN-10</title>
+    <link rel="stylesheet" href="./learn10.css">
+</head>
+<body>
+    <p>这里主要做叙述，这对应了MDN的<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">在CSS中调整大小</a>这一节</p>
+    <p>是用百分数，一般是相对于父元素的相对属性大小来的，比如设置宽度为百分数，那就是父元素的宽度的百分比，边框也是类似的。</p>
+    <p>还有一件事，就是如果是用百分数设置内边距和外边距，但是此时没有父元素参考，那么此时参考的是width，无论上下还是左右方向。而不是上下参考height，左右参考width，全部是width！！！</p>
+    <p>此外，还有通过min-height/width或max-height/width属性来实现限制最小/最大大小的功能，比方说随着内容增加自动拉长的盒子或者图片缩放最大大小限制。</p>
+    <p id="id1">
+        我是一大段文字，很多很多的文字，等会你就看到我是怎么动态扩展的了。嘻嘻嘻嘻，继续编辑我你就看到啦～
+    </p>
+    <p id="id2">
+        我会随着窗口大小改变而改变。
+    </p>
+</body>
+</html>

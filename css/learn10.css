@@ -1,0 +1,10 @@
+#id1 {
+    min-height: 100px;
+    width: 100px;
+    border: 2px solid rebeccapurple;
+}
+
+#id2 {
+    border: 2px solid pink;
+    font-size: 10vh;
+}
