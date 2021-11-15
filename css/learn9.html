@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARN-9</title>
+    <link rel="stylesheet" href="./learn9.css">
+</head>
+<body>
+    <p>现在我们来学习CSS中的单位和值。</p>
+    <p>常用的就是带单位的值，百分比，或者纯碎的数字，比如在RGB色彩中用到的。</p>
+    <p>首先是绝对长度单位，这里面包含了厘米这些常见的现实中的单位，同时也包括了常见的像素单位px</p>
+    <p>然后是相对长度单位，这里的相对要么是相对父元素的属性，要么是相对本元素内的其他属性。
+        <br>
+        比如em如果用在font-size中，则是<b>相对于父元素的字体大小</b>，如果用在别的位置，则是<b>相对于自己的font-size大小</b>；加个r，即rem则是相对于根元素的。
+        <br>
+        其他单位看<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#数字，长度和百分比">这里</a>。
+    </p>
+    <p>现在我们来看一个实验，首先是使用em的：</p>
+    <div class="class1">
+        aaa
+        <div class="class1">
+            bbb
+            <div class="class1">
+                ccc
+                <div class="class1">
+                    ddd
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>然后是rem的：</p>
+    <div class="class2">
+        aaa
+        <div class="class2">
+            bbb
+            <div class="class2">
+                ccc
+                <div class="class2">
+                    ddd
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>此外，百分比也有类似的作用，但是只能是相对的，不能实现绝对效果。</p>
+    
+    <div class="class3">
+        aaa
+        <div class="class3">
+            bbb
+            <div class="class3">
+                ccc
+                <div class="class3">
+                    ddd
+                </div>
+            </div>
+        </div>
+    </div>
+    <p id="id1">
+        我是文本
+    </p>
+    <p>
+        最后，还有调整颜色的方法，比如RGB/RGBA或者HSL/HSLA方式进行指定。
+        <br>
+        也可以通过calc()函数进行动态计算大小。
+    </p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+html {
+    font-size: 15px;
+}
+
+.class1 {
+    font-size: 1.4em;
+}
+
+.class2 {
+    font-size: 1.4rem;
+}
+
+.class3 {
+    font-size: 140%;
+}
+
+#id1 {
+    background-color: pink;
+    /**
+    还可以通过小数指定一些值，比如透明度
+    */
+    opacity: 0.4;
+}
