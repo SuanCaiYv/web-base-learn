@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,96 @@
     <title>LEARN-17</title>
     <link rel="stylesheet" href="./learn17.css">
 </head>
+
 <body>
-    
+    <p>正常布局流就是最普通最常见的那种布局流，相当于你什么CSS都不写，块级元素的内容Content)宽度默认同父级元素宽度一样；内联元素默认宽度不起作用，二者高度则是和文本大小有关。</p>
+    <p>此外，一般而言，新增块级元素会出现在文本书写方向的垂直方向上，新增内联元素则是和文本书写方向一致，除非没有足够的空间，则会触发换行。</p>
+    <br>
+    <p>现在来看看弹性盒子吧！(display: flex</p>
+    <br>
+    <p>
+        首先来了解一些专业术语：
+    <ul>
+        <li>
+            主轴：块级元素排列方向，什么都不写的情况下就是上下方向。起始位置称为main start/end
+        </li>
+        <li>
+            交叉轴：垂直于主轴方向的轴，起始方向称为cross start/end
+        </li>
+        <li>
+            flex容器：设置了display: flex的元素，既flex元素项的父元素。
+        </li>
+        <li>
+            flex元素项：实际需要产生效果的元素。因为flex设置在某一个元素，效果生成在子元素之上。
+        </li>
+    </ul>
+    </p>
+    <p>flex-direction属性的row/column值可以指定主轴方向。</p>
+    <p>flex-wrap: wrap可以实现数据不溢出，既自动换行；flex: 1234px会指定flex元素最小宽度。</p>
+    <p>这里需要强调一件事，就是，我们通过在父元素设置display: flex开启弹性盒子，但是弹性盒子地特性是作用在子元素上的；
+        所以对于flex相关属性的设置，需要写在flex项上，而不再是父元素上。
+    </p>
+    <p>好，我相信你能理解我在说什么，现在我们来看看flex项的动态尺寸吧！</p>
+    <p>尝试设置flex: 1。无单位的单个值指出每一个flex项占用的可用空间(除去内外边距之外的空间)的比例，它是一个比例值</p>
+    <p>所以在这里我们有三个flex项，就是1:1:1，所以剩余空间被它们三等分，你也可以指定某一个项不是1，这样会重新划分比例。</p>
+    <p>或者说设置比例+最小值的方式，比如flex: 1 200px就指定在按比例划分空间的前提下必须按照最小宽度/高度进行保留。</p>
+    <p>关于如何管理flex项在主轴和交叉轴上的排列位置，详见CSS注释。</p>
+    <br>
+    <p>flex项的order属性可以指定项的排序位置，值越小越靠前，默认是0</p>
+    <p>最后我们尝试在一个flex项中嵌套一个多个flex项：</p>
+    <br>
+    <header>
+        <h1>我是示例文字的Header</h1>
+    </header>
+
+    <section>
+        <article>
+            <h2>第一篇文章</h2>
+
+            <p>魏文侯问扁鹊：“你兄弟三人，哪个软件开发水平最高?”
+                扁鹊说：“大哥最好，二哥其次，我最差。”
+                文侯甚为不解。扁鹊解释道：“我大哥不等Bug出现就提前预防了，所以名声传不出开发组。
+                二哥在Bug出现时就顺手解决了，所以名声传不出技术部。
+                我呢，每天像打地鼠一般到处救火，所以在公司没人不知道我。</p>
+        </article>
+
+        <article>
+            <h2>第二篇文章</h2>
+
+            <p>我喜欢居无约束闲情散淡的日子；但是那也会让我看起来很放浪。
+                <br>
+                所以我还是决定给这种日子加一点料，让它沉下来，经得起日后的细雕慢琢。
+            </p>
+        </article>
+
+        <article>
+            <h2>第三篇文章</h2>
+
+            <p>太阳已经落下，折射过来的微光努力地拉住最后的时间，星场已经翻了过来，在这即将散去的光线和代表沉静的夜晚的冲撞中，便是“芒星”了。
+                <br>
+                “芒星”很短，哪怕在仲夏之时，也不过半个小时而已。
+                <br>
+                它真的很珍贵，一不留神就到了“漫星”的夜晚了。芒星之间，便是人间最难得的东西。
+                <br>
+                它不属于任何人，它只属于自己，属于这个自然的馈赠。
+            </p>
+            <div id="id1">
+                <button class="class1">Smile</button>
+                <button class="class1">Laugh</button>
+                <button class="class1">Wink</button>
+                <button class="class1">Shrug</button>
+                <button class="class1">Blush</button>
+              </div>
+        </article>
+    </section>
+    <br>
+    <div>
+        <button>Smile</button>
+        <button>Laugh</button>
+        <button>Wink</button>
+        <button>Shrug</button>
+        <button>Blush</button>
+    </div>
 </body>
+
 </html>

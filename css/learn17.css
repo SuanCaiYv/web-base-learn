@@ -1,0 +1,74 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background: rgb(0, 98, 128);
+    height    : 100px;
+}
+
+h1 {
+    text-align : center;
+    color      : white;
+    line-height: 100px;
+    margin     : 0;
+}
+
+article {
+    padding   : 10px;
+    margin    : 10px;
+    background: rgb(207, 169, 64);
+    flex      : 1;
+}
+
+section {
+    display: flex;
+}
+
+button {
+    font-size  : 18px;
+    line-height: 1.5;
+    width      : 15%;
+}
+
+div {
+    height         : 100px;
+    border         : 1px solid black;
+    display        : flex;
+    /**
+    此属性控制flex项在交叉轴上的位置，因为button是内联元素，所以交叉轴是上下方向的。
+    除了center指定放在中间位置，还有flex-start/end，即放置在交叉轴开始或结束位置。
+    它的默认值是stretch(拉伸的意思)，默认会拉伸到占据父元素所有空间。
+    */
+    align-items    : center;
+    /**
+    控制flex项在主轴上的位置，除了上面说的flex-start/end之外，center依旧可用。
+    除此之外还有两个常用的值：space-around和space-between，可以自己试试查看效果。
+    */
+    justify-content: space-around;
+}
+
+#id1 {
+    flex: 1 100px;
+    display: flex;
+    /**
+    相当于flex-direction + flex-wrap
+    */
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#id2 {
+    display: flex;
+    flex-flow: column;
+}
+
+.class1 {
+    flex: 1;
+    margin: 5px;
+}
