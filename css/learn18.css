@@ -1,5 +1,5 @@
 .class1 {
-    border: 2px solid green;
+    border   : 2px solid green;
     font-size: 20px;
 }
 
@@ -8,7 +8,7 @@
 }
 
 #id1 {
-    display: grid;
+    display              : grid;
     /**
     指出列划分规则，fr代表比例，即剩余可用空间比例
     此外，也可以使用repeat()函数实现重复效果，即生成多个fr出来，一种偷懒方式；
@@ -17,25 +17,108 @@
     /**
     指定网格间隙，可以使用row/column-gap实现方向上的控制
     */
-    gap: 5px;
+    gap                  : 5px;
 }
 
 #id2 {
-    display: grid;
+    display              : grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px;
+    gap                  : 5px;
     /**
     我们在这里指定自动生成的隐式行的大小
     */
-    grid-auto-rows: 100px;
+    grid-auto-rows       : 100px;
 }
 
 #id3 {
-    display: grid;
+    display              : grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px;
+    gap                  : 5px;
     /**
     这里auto指出无边界大小
     */
-    grid-auto-rows: minmax(40px, auto);
+    grid-auto-rows       : minmax(40px, auto);
+}
+
+#id4 {
+    display              : grid;
+    /**
+    自动重复，且保证列大小大于等于400px，小于等于页面宽度，所以这会产生
+    “在满足列长度范围里尽可能多填充的效果，在同等列数量情况下尽可能长的列”的效果。
+    */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-auto-rows       : minmax(100px, auto);
+    gap                  : 5px;
+}
+
+#id5 {
+    display              : grid;
+    /**
+    此时我们有了四条列线，三条行线。
+    */
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-auto-rows       : minmax(100px, auto);
+    gap                  : 5px;
+}
+
+#id6 {
+    /**
+    这只是一种简写，全写为：grid-column-start/end；在这里我们通过'/'符号分割start和end的值。
+    */
+    grid-column: 1 / 4;
+    grid-row   : 1 / 1;
+}
+
+#id7 {
+    grid-column: 1 / 2;
+    grid-row   : 2 / 4;
+}
+
+#id9 {
+    grid-column: 3 / 4;
+    grid-row   : 2 / 4;
+}
+
+#id11 {
+    grid-column: 1 / 4;
+    grid-row   : 4 / 5;
+}
+
+#id12 {
+    display: grid;
+    /**
+    通过字符串进行强排版，写哪排哪，同时记得可以使用'.'符号来表示占位符
+    */
+    grid-template-areas:
+    "one one one"
+    "two three four"
+    "two five four"
+    "six six six";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-auto-rows       : minmax(100px, auto);
+    gap                  : 5px;
+}
+
+#id13 {
+    grid-area: one;
+}
+
+#id14 {
+    grid-area: two;
+}
+
+#id15 {
+    grid-area: three;
+}
+
+#id16 {
+    grid-area: four;
+}
+
+#id17 {
+    grid-area: five;
+}
+
+#id18 {
+    grid-area: six;
 }

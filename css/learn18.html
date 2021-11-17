@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LEARN-18</title>
     <link rel="stylesheet" href="./learn18.css">
 </head>
+
 <body>
     <p>现在我们来学习一下网格布局，顾名思义，就是把整个页面看成一个大号的网格。
         然后选择你的元素想要跨越的网格，即，从哪个网格开始，到哪个网格结束。
@@ -43,5 +45,37 @@
         <div class="class1"><span class="class2">第六个</span></div>
         <div class="class1">第七个</div>
     </div>
+    <p>再来看一个好玩的功能，就是自动填充列：</p>
+    <div id="id4">
+        <div class="class1">第一个</div>
+        <div class="class1">第二个</div>
+        <div class="class1">第三个</div>
+        <div class="class1">第四个</div>
+        <div class="class1">第五个</div>
+        <div class="class1">第六个</div>
+        <div class="class1">第七个</div>
+    </div>
+    <p>现在我们来看看基于线的布局，这么理解吧，如果有三个列，那么就有四条列线，两行就有三条行线（自己数嘛~</p>
+    <p>所以我们可以指定某个元素跨越哪些线，即从哪开始从哪结束，实现更加精确地布局。来看个例子好了：</p>
+    <div id="id5">
+        <div id="id6" class="class1">第一个</div>
+        <div id="id7" class="class1">第二个</div>
+        <div id="id8" class="class1">第三个</div>
+        <div id="id9" class="class1">第四个</div>
+        <div id="id10" class="class1">第五个</div>
+        <div id="id11" class="class1">第六个</div>
+    </div>
+    <p>以上只是一个小的例子，但是却揭示了网格布局的强大，我们可以很容易做出横跨多个网格的元素布局效果。</p>
+    <p>现在我们来看看最朴实无华的排版方式——指定元素排版：</p>
+    <div id="id12">
+        <div id="id13" class="class1">第一个</div>
+        <div id="id14" class="class1">第二个</div>
+        <div id="id15" class="class1">第三个</div>
+        <div id="id16" class="class1">第四个</div>
+        <div id="id17" class="class1">第五个</div>
+        <div id="id18" class="class1">第六个</div>
+    </div>
+    <p>简单直白是吧！</p>
 </body>
+
 </html>
