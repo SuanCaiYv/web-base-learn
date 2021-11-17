@@ -1,0 +1,41 @@
+.class1 {
+    border: 2px solid green;
+    font-size: 20px;
+}
+
+.class2 {
+    font-size: 50px;
+}
+
+#id1 {
+    display: grid;
+    /**
+    指出列划分规则，fr代表比例，即剩余可用空间比例
+    此外，也可以使用repeat()函数实现重复效果，即生成多个fr出来，一种偷懒方式；
+    */
+    grid-template-columns: 200px 1fr 2fr;
+    /**
+    指定网格间隙，可以使用row/column-gap实现方向上的控制
+    */
+    gap: 5px;
+}
+
+#id2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    /**
+    我们在这里指定自动生成的隐式行的大小
+    */
+    grid-auto-rows: 100px;
+}
+
+#id3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    /**
+    这里auto指出无边界大小
+    */
+    grid-auto-rows: minmax(40px, auto);
+}

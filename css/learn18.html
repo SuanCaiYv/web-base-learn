@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./learn18.css">
+</head>
+<body>
+    <p>现在我们来学习一下网格布局，顾名思义，就是把整个页面看成一个大号的网格。
+        然后选择你的元素想要跨越的网格，即，从哪个网格开始，到哪个网格结束。
+    </p>
+    <p>在这里，我们可以设置基础网格大小，网格与网格之间的间隙大小等属性。</p>
+    <p>来看一个例子吧：</p>
+    <div id="id1">
+        <div class="class1">第一个</div>
+        <div class="class1">第二个</div>
+        <div class="class1">第三个</div>
+        <div class="class1">第四个</div>
+        <div class="class1">第五个</div>
+        <div class="class1">第六个</div>
+        <div class="class1">第七个</div>
+    </div>
+    <p>在这里我们注意到，我们只是定义了列的大小，行的大小没有指定，却依旧可以恰当地显示，这是因为有隐式网格存在的原因。</p>
+    <p>隐式网格的大小为auto，即会根据文本大小自动调整。不过我们也可以手动指定其大小，这样就可以在只指定显式列的情况下，让自动生成的行有一个期待大小值。</p>
+    <div id="id2">
+        <div class="class1">第一个</div>
+        <div class="class1">第二个</div>
+        <div class="class1">第三个</div>
+        <div class="class1">第四个</div>
+        <div class="class1">第五个</div>
+        <div class="class1">第六个</div>
+        <div class="class1">第七个</div>
+    </div>
+    <p>此外，试试自动伸缩大小的minmax()函数，可以指定列/行的大小范围，并且会根据实际情况进行伸缩。</p>
+    <div id="id3">
+        <div class="class1">第一个</div>
+        <div class="class1"><span class="class2">第二个</span></div>
+        <div class="class1">第三个</div>
+        <div class="class1">第四个</div>
+        <div class="class1">第五个</div>
+        <div class="class1"><span class="class2">第六个</span></div>
+        <div class="class1">第七个</div>
+    </div>
+</body>
+</html>
