@@ -1,0 +1,46 @@
+#id1 {
+    float: left;
+    width: 200px;
+    height: 100px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+body {
+    min-width: 300px;
+}
+
+article > p {
+    border: 2px solid black;
+}
+
+#id2 {
+    float: left;
+    /**
+    这里我们使用百分比，可以实现大小随窗口大小变化。
+    */
+    width: 30%;
+    margin-right: 3%;
+}
+
+/**
+在这里我们需要注意一下，书写顺序很重要，因为float的优先级都是一样的，所以先写在前面的会先生效。
+*/
+#id3 {
+    float: left;
+    width: 30%;
+    margin-right: 3%;
+}
+
+#id4 {
+    float: right;
+    width: 30%;
+}
+
+#id5 {
+    /**
+    clear指出清除浮动效果，包括清除left/right或者全部both。
+    */
+    clear: both;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,54 @@
     <title>LEARN-19</title>
     <link rel="stylesheet" href="./learn19.css">
 </head>
+
 <body>
-    
+    <p>浮动可以用来实现图像悬浮效果，但是不只是图像；借由浮动，我们可以实现很多包括文字和图像在内的排版效果。</p>
+    <p>
+        <img src="./static/IMG_0853.jpg" alt="" id="id1">
+        端着碗坐在门口，时不时㧅点菜给旁边的看门狗吃吃；
+        老人看着在水洼洼里霍霍的孙子，和旁边的老邻居扯起了家常；
+        一个骑车飞快的孩子，车篮里塞着一个篮球，风从球衣灌过，既是稚嫩又是帅气；
+        翻水闸放了水，一群闲来无事的小伙子扯着网，看看这次上来的是鲤鱼还是草鱼；
+        几个男孩女孩站在桥上，打打闹闹......被雨淋过的树那么的明镜，就像抬头看到的天一样清爽，就连空气都是洗涤过的那般。
+    </p>
+    <br>
+    <p>浮动元素会脱离原本的文档流，然后依据float指定的值吸附到父元素的某一边。</p>
+    <p>除了图片之外，我们还可以使用首字下沉的例子来说明浮动，中文这里就不展示了。总之，文字也是可以作为一个元素进行浮动设计的。</p>
+    <br>
+    <p>现在我们来看看多列浮动布局，以及怎么统一不同列的高度，消除浮动以用于非浮动元素不被影响：</p>
+    <article>
+        <p id="id2">
+            I have felt winds straight from the South Pole, bleak and wailing like a lost child; winds as tender
+            and warm as a lover’s breath; winds that carried the astringent smell of salt and the death of seaweeds;
+            winds that carried the moist rich smell of a forest floor, the smell of a million flowers. Fierce winds that
+            churned and moved the sea like yeast, or winds that made the waters lap at the shore like a kitten.</p>
+        <p id="id3">
+            I have known silence: the cold, earthy silence at the bottom of a newly dug well; the implacable stony
+            silence of a deep cave; the hot, drugged midday silence when everything is hypnotized and stilled into
+            silence by the eye of the sun; the silence when great music ends.
+        </p>
+        <p id="id4">
+            I have heard summer cicadas cry so that the sound seems stitched into your bones. I have heard tree frogs in
+            an orchestration as complicated as Bach singing in a forest lit by a million emerald fireflies. I have heard
+            the Keas calling over grey glaciers that groaned to themselves like old people as they inched their way to
+            the sea. I have heard the hoarse street vendor cries of the mating Fur seals as they sang to their sleek
+            golden wives, the crisp staccato admonishment of the Rattlesnake, the cobweb squeak of the Bat and the
+            belling roar of the Red deer knee-deep in purple heather. I have heard Wolves baying at a winter’s moon, Red
+            Howlers making the forest vibrate with their roaring cries. I have heard the squeak, purr and grunt of a
+            hundred multi-coloured reef fishes.
+        </p>
+    </article>
+    <div id="id5"></div>
+    <p>在这里我们通过插入一个空的div并清除浮动实现对下面元素的浮动清除效果，同时实现建立可用外边距的效果。</p>
+    <p>
+        我觉得这里我有必要解释一下。float元素可以理解成在新的图层上，但是参考标准是它的父元素。就是说，各种float效果是以父元素为参考的。
+        <br>
+        但是因为浮动元素脱离于正常布局流，所以我们设置外边距最终会作用到父元素上（理解浮动元素漂浮在原本的图层上，所以不在一层，无法对浮动元素生效）。
+        <br>
+        所以我们特地设置一个空的div元素，作为处于浮动元素和父元素图层之间的中间人，然后对这个div设置外边距就好像对浮动元素设置了外边距一样。
+    </p>
+    <p>上面之所以加上边框是因为为了演示浮动元素并不是等高的，如果想实现可以使用和父元素同一背景(看不出来)，flex布局，或者溢出处理(加滑动条)。</p>
 </body>
+
 </html>
