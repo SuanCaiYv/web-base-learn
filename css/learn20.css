@@ -1,0 +1,33 @@
+.c1 {
+    background-color: pink;
+    max-width       : 100px;
+}
+
+#id1 {
+    position: static;
+}
+
+#id2 {
+    position: relative;
+    /**
+    理解成相对于top向下“推了”10px
+    */
+    top     : 10px;
+    /**
+    理解成相对于left向右“推了”10px
+    */
+    left    : 20px;
+}
+
+#id3 {
+    /**
+    可以试着修改为static看看会发生什么
+    */
+    position: relative;
+}
+
+#id4 {
+    position: absolute;
+    top     : 10px;
+    left    : 20px;
+}

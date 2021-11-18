@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARN-20</title>
+    <link rel="stylesheet" href="./learn20.css">
+</head>
+<body>
+    <p>现在我们来看看定位如何实现更加精确和高度定制化的布局。</p>
+    <p>想要对一个元素实现定位，需要借助于它的position属性完成，此属性有五个值，让我们来看一看。</p>
+    <p>position的五个属性：</p>
+    <ul>
+        <li>
+            static是默认属性，相当于正常文档布局流，说白了相当于啥也不写。
+        </li>
+        <li>
+            relative表示相对定位，即<b>相对于正常文档布局流</b>的位置，相对值通过top/left/bottom/right指定
+        </li>
+        <li>
+            absolute表示绝对定位，即<b>相对于从内向外的第一个position为relative的父元素</b>，如果没有则是视窗作为定位上下文(偏移量参考的元素)。
+        </li>
+        <li>
+            fixed表示固定定位，即永远<b>以视窗作为定位上下文</b>；所以可以实现诸如导航栏之类的效果，即固定不变的位置。
+        </li>
+        <li>
+            sticky表示粘性定位，即随着页面滚动，直到到达指定位置，触发固定效果。
+        </li>
+    </ul>
+    <p>现在我们来一个个看：</p>
+    <p>首先是相对定位，相对于原本的正常布局流的定位</p>
+    <div id="id1">
+        <div id="id2" class="c1">
+            <p>我是第一段话</p>
+        </div>
+        <div class="c1">
+            <p>我是第二段话</p>
+        </div>
+        <div class="c1">
+            <p>我是第三段话</p>
+        </div>
+        <div class="c1">
+            <p>我是第四段话</p>
+        </div>
+    </div>
+    <p>然后是绝对定位，相对于原本的正常布局流的定位</p>
+    <div id="id3">
+        <div class="c1">
+            <p>我是第一段话</p>
+        </div>
+        <div id="id4" class="c1">
+            <p>我是第二段话</p>
+        </div>
+        <div class="c1">
+            <p>我是第三段话</p>
+        </div>
+        <div class="c1">
+            <p>我是第四段话</p>
+        </div>
+    </div>
+    <p>多一下嘴，如果你想控制多个定位元素的覆盖顺序，尤其是绝对定位元素的覆盖顺序(因为他们新建了一个图层)，则可以使用z-index属性指定，越小越贴近屏幕，越大越贴近你的眼睛。</p>
+</body>
+</html>
