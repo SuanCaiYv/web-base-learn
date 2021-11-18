@@ -1,0 +1,17 @@
+#id1 {
+    column-count: 3;
+    column-gap: 20px;
+    column-width: 300px;
+    /**
+    设置分割线样式
+    */
+    column-rule: 2px solid pink;
+    /**
+    禁止列被折断
+    */
+    page-break-inside: avoid;
+}
+
+img {
+    width: 100%;
+}
