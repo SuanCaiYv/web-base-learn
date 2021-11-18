@@ -3,6 +3,13 @@
     max-width       : 100px;
 }
 
+.c2 {
+    background-color: white;
+    color: black;
+    position: sticky;
+    top: 0;
+}
+
 #id1 {
     position: static;
 }

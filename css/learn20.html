@@ -60,5 +60,39 @@
         </div>
     </div>
     <p>多一下嘴，如果你想控制多个定位元素的覆盖顺序，尤其是绝对定位元素的覆盖顺序(因为他们新建了一个图层)，则可以使用z-index属性指定，越小越贴近屏幕，越大越贴近你的眼睛。</p>
+    <p>现在来看看固定定位</p>
+    <p>呃，比较简单啦！就不演示了，因为它就相当于始终以视窗为定位上下文的绝对定位。
+        这里需要注意的是：它会脱离正常布局流，所以你的正常布局流内容需要预留出一定空间，防止被固定位置的元素覆盖。</p>
+    <p>最后我们来看看粘性标签，它会跟随页面滚动，但是一旦到达了设定的位置，就固定不变了。</p>
+    <div id="id5">
+        <ul>
+            <p class="c2">A</p>
+            <li>Apple</li>
+            <li>ApplePencil</li>
+            <li>AppleWatch</li>
+            <li>ApplePark</li>
+            <li>ApplePay</li>
+            <p class="c2">M</p>
+            <li>MiPhone</li>
+            <li>MiWatch</li>
+            <li>MiHome</li>
+            <li>MiPen</li>
+            <li>MiHouse</li>
+            <li>MiCharger</li>
+            <p class="c2">H</p>
+            <li>HuaWeiBook</li>
+            <li>HuaWeiPhone</li>
+            <li>HuaWeiWatch</li>
+            <p class="c2">G</p>
+            <li>GoogleSearch</li>
+            <li>GoogleAndroid</li>
+            <li>GoogleGolang</li>
+            <li>GoogleChrome</li>
+            <p class="c2">O</p>
+            <li>OracleJava</li>
+            <li>OracleMySQL</li>
+            <li>OracleOracle</li>
+        </ul>
+    </div>
 </body>
 </html>
