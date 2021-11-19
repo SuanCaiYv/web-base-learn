@@ -1,3 +1,9 @@
 .c1 {
     text-align: center;
 }
+
+#confirm {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
