@@ -1,3 +1,11 @@
+let currentTime = document.getElementById("current-time")
+
+// 间隔任务
+setInterval(function() {
+    let time = new Date()
+    currentTime.textContent = "现在是: " + format(time.getHours(), 2) + ":" + format(time.getMinutes(), 2) + ":" + format(time.getSeconds(), 2)
+}, 995)
+
 let start = document.getElementById("start")
 let pause = document.getElementById("pause")
 let reset = document.getElementById("reset")

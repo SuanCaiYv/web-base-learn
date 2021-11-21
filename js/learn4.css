@@ -15,6 +15,12 @@ input {
     white-space: pre;
 }
 
+#now {
+    border: 1px solid black;
+    background-color: pink;
+    border-radius: 6px;
+}
+
 #number {
     width: 60px;
     box-sizing: border-box;
