@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARN-3</title>
+    <link rel="stylesheet" href="./learn3.css">
+    <script async src="./learn3.js"></script>
+</head>
+
+<body>
+    <p>现在我们来看看JS中的异步编程，这也是JS最不同的地方之一：</p>
+    <p>JS有两种异步编程，分别是回调(Callback)和许诺(Promises)，后者是新派方式，现在来看看对比。</p>
+    <p>首先是第一种，Callback模式的，这里我们使用XMLHttpRequest来实现：</p>
+    <div class="form-input">
+        <form action="">
+            <div class="inputs">
+                <span class="prefix-input">Name:</span><input type="text" id="name1">
+            </div>
+            <div class="inputs">
+                <span class="prefix-input">Age: </span><input type="text" id="age1">
+            </div>
+            <div class="inputs" id="submit1">
+                <input type="submit" value="提交">
+            </div>
+        </form>
+    </div>
+    <div class="outputs">
+        <span class="prefix-output">响应:</span><span id="resp1"></span>
+    </div>
+    <br>
+    <p>然后是Promises模式，这里我们使用fetch()方法来实现：</p>
+    <div class="form-input">
+        <form action="">
+            <div class="inputs">
+                <span class="prefix-input">Name:</span><input type="text" id="name2">
+            </div>
+            <div class="inputs">
+                <span class="prefix-input">Age: </span><input type="text" id="age2">
+            </div>
+            <div class="inputs" id="submit2">
+                <input type="submit" value="提交">
+            </div>
+        </form>
+    </div>
+    <div class="outputs">
+        <span class="prefix-output">响应:</span><span id="resp2"></span>
+    </div>
+</body>
+
+</html>
