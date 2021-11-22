@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARN-6</title>
+    <link rel="stylesheet" href="./learn6.css">
+    <script async src="./learn6.js"></script>
+</head>
+
+<body>
+    <p>现在我们来学习Promises的一些用法，在这里我们以下载文件为耗时任务。</p>
+    <div class="inputs">
+        <div class="divs">
+            <select name="choice" id="choice" class="buttons">
+                <option value="0" selected class="options">第一张</option>
+                <option value="1" class="options">第二张</option>
+            </select>
+        </div>
+        <div class="divs">
+            <input type="button" value="下载图片" id="button" class="buttons">
+        </div>
+    </div>
+    <img src="" alt="" id="output-img">
+    <br>
+    <p>现在我们来看看多个Promises的情况，就是后面的执行需要等待前面所有的Promises全部OK才行：</p>
+    <div class="inputs">
+        <div class="more-divs">
+            <input type="button" value="异常1" id="err1" class="buttons">
+            <input type="button" value="等待3000" id="wait1" class="buttons">
+        </div>
+        <div class="more-divs">
+            <input type="button" value="异常2" id="err2" class="buttons">
+            <input type="button" value="等待1000" id="wait2" class="buttons">
+        </div>
+        <div class="more-divs">
+            <input type="button" value="异常3" id="err3" class="buttons">
+            <input type="button" value="等待2000" id="wait3" class="buttons">
+        </div>
+    </div>
+    <br>
+    <div class="inputs-another">
+        <div class="divs-another" id="divs-another-1">
+            <input type="button" value="开始" id="start" class="buttons">
+        </div>
+        <div class="divs-another" id="divs-another-2">
+            <p id="output-text"></p>
+        </div>
+    </div>
+</body>
+
+</html>
