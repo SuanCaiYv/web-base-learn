@@ -5,49 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEARN-3</title>
-    <link rel="stylesheet" href="./learn3.css">
-    <script async src="./learn3.js"></script>
+    <title>LEARN-2</title>
+    <link rel="stylesheet" href="./learn2.css">
+    <script async src="./learn2.js"></script>
 </head>
 
 <body>
-    <p>现在我们来看看JS中的异步编程，这也是JS最不同的地方之一：</p>
-    <p>JS有两种异步编程，分别是回调(Callback)和许诺(Promises)，后者是新派方式，现在来看看对比。</p>
-    <p>首先是第一种，Callback模式的，这里我们使用XMLHttpRequest来实现：</p>
-    <div class="form-input">
-        <form action="">
-            <div class="inputs">
-                <span class="prefix-input">Name:</span><input type="text" id="name1">
-            </div>
-            <div class="inputs">
-                <span class="prefix-input">Age: </span><input type="text" id="age1">
-            </div>
-            <div class="inputs" id="submit1">
-                <input type="submit" value="提交">
-            </div>
-        </form>
-    </div>
-    <div class="outputs">
-        <span class="prefix-output">响应:</span><span id="resp1"></span>
-    </div>
-    <br>
-    <p>然后是Promises模式，这里我们使用fetch()方法来实现：</p>
-    <div class="form-input">
-        <form action="">
-            <div class="inputs">
-                <span class="prefix-input">Name:</span><input type="text" id="name2">
-            </div>
-            <div class="inputs">
-                <span class="prefix-input">Age: </span><input type="text" id="age2">
-            </div>
-            <div class="inputs" id="submit2">
-                <input type="submit" value="提交">
-            </div>
-        </form>
-    </div>
-    <div class="outputs">
-        <span class="prefix-output">响应:</span><span id="resp2"></span>
-    </div>
+    <p>现在我们进入JS基本教学。作为一个约定，如果是我已经知道的知识，或者我了解的用法，我会直接略过。</p>
+    <p>本学习笔记仅记录那些我不了解的和JS独有的特性。</p>
+    <p>现在我们来看看创建JavaScript对象的方法，MDN提到了四种方式：</p>
+    <ul>
+        <li>
+            直接定以创建法：
+            <p id="id1"></p>
+        </li>
+        <li>
+            函数创建法：
+            <p id=id2></p>
+        </li>
+        <li>
+            构造器创建法(需要定义类)：
+            <p id="id3"></p>
+        </li>
+        <li>
+            对象克隆法：
+            <p id="id4"></p>
+        </li>
+    </ul>
+    <p>具体实现细节请看JS文件源码。</p>
 </body>
 
 </html>

@@ -1,53 +1,52 @@
-let name1 = document.getElementById("name1")
-let age1 = document.getElementById("age1")
-let submit1 = document.getElementById("submit1")
-let resp1 = document.getElementById("resp1")
+// 创建对象的常见方法
 
-// 其实这儿也算一个回调，当按钮被点击会触发回调函数的执行
-submit1.onclick = function () {
-    let input = {
-        "name": name1.value,
-        "age": age1.value
+// 直接创建
+let book1 = {
+    name: "JavaScript",
+    price: 78.9,
+    toString: function(prefix) {
+        return prefix + ": " + this.name + ", " + this.price
     }
-    let xhr = new XMLHttpRequest()
-    xhr.open("POST", "http://127.0.0.1:8190/t1", true)
-    xhr.setRequestHeader("Content-Type", "application/json")
-    // 这里使用回调异步，当结果可用，会自动调用这个函数
-    xhr.onload = function (e) {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                resp1.textContent = this.responseText
-            } else {
-                console.error(xhr.statusText);
-            }
+}
+
+let p1 = document.getElementById("id1")
+p1.textContent = book1.toString("Display")
+
+// 函数创建
+function createBook(name, price) {
+    let book = {}
+    book.name = name
+    book.price = price
+    book.toString = function(prefix) {
+        return prefix + ": " + this.name + ", " + this.price
+    }
+    return book
+}
+
+let book2 = createBook("C++", 70.3)
+
+let p2 = document.getElementById("id2")
+p2.textContent = book2.toString("Display")
+
+// 定义一个类并创建
+class Book {
+    constructor(name, price) {
+        this.name = name
+        this.price = price
+        this.toString = function (prefix) {
+            return prefix + ": " + this.name + ", " + this.price
         }
     }
-    xhr.send(JSON.stringify(input))
 }
 
-let name2 = document.getElementById("name2")
-let age2 = document.getElementById("age2")
-let submit2 = document.getElementById("submit2")
-let resp2 = document.getElementById("resp2")
+// 需要使用new关键字
+let book3 = new Book("Java", 68.9)
 
-submit2.onclick = function() {
-    let input = {
-        "name": name2.value,
-        "age": age2.value
-    }
-    fetch("http://127.0.0.1:8190/t1", {
-        body: JSON.stringify(input),
-        headers: {
-            'Content-Type': "application/json"
-        },
-        method: 'POST',
-        mode: 'cors'
-    })
-    .then(resp => {
-        return resp.json()
-    })
-    .then(data => {
-        resp2.textContent = JSON.stringify(data)
-    })
-    console.log('run')
-}
+let p3 = document.getElementById("id3")
+p3.textContent = book3.toString("Display")
+
+// 对象克隆
+let book4 = Object.create(book3)
+
+let p4 = document.getElementById("id4")
+p4.textContent = book4.toString("Display")
