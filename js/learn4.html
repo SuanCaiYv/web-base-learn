@@ -5,40 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEARN-4</title>
-    <link rel="stylesheet" href="./learn4.css">
-    <script async src="./learn4.js"></script>
+    <title>LEARN-3</title>
+    <link rel="stylesheet" href="./learn3.css">
+    <script async src="./learn3.js"></script>
 </head>
 
 <body>
-    <p>现在我们来学习超时和间隔器的使用</p>
-    <p>setTimeout()接收三个参数，第一个是超时时间到达需要执行的函数，第二个是时间间隔(单位是毫秒)，第三个是传递给需要执行的函数的参数。</p>
-    <p>setInterval()接收两个参数，第一个是需要定期执行的函数，第二个是时间间隔，单位(毫秒)</p>
-    <p>二者都有对应的清除方法：clearTimeout()/clearInterval()；入参是对应set()函数的返回值，可以理解成句柄</p>
-    <p>现在我们以一个定时器为例子来看看怎么使用它们：</p>
-    <div>
-        <p id="current-time"></p>
+    <p>现在我们来看看JS中的异步编程，这也是JS最不同的地方之一：</p>
+    <p>JS有两种异步编程，分别是回调(Callback)和许诺(Promises)，后者是新派方式，现在来看看对比。</p>
+    <p>首先是第一种，Callback模式的，这里我们使用XMLHttpRequest来实现：</p>
+    <div class="form-input">
+        <form action="">
+            <div class="inputs">
+                <span class="prefix-input">Name:</span><input type="text" id="name1">
+            </div>
+            <div class="inputs">
+                <span class="prefix-input">Age: </span><input type="text" id="age1">
+            </div>
+            <div class="inputs" id="submit1">
+                <input type="submit" value="提交">
+            </div>
+        </form>
     </div>
-    <div id="div1">
-        <div>
-            <input type="button" value="开始" id="start">
-        </div>
-        <div>
-            <input type="button" value="暂停" id="pause">
-        </div>
-        <div>
-            <input type="button" value="重置" id="reset">
-        </div>
-        <div>
-            <input type="button" value="时长" id="interval">
-        </div>
-        <div>
-            <input type="number" value="定时" id="number">
-            <input type="button" value="确认" id="confirm">
-        </div>
+    <div class="outputs">
+        <span class="prefix-output">响应:</span><span id="resp1"></span>
     </div>
-    <div id="div2">
-        <p id="output"></p>
+    <br>
+    <p>然后是Promises模式，这里我们使用fetch()方法来实现：</p>
+    <div class="form-input">
+        <form action="">
+            <div class="inputs">
+                <span class="prefix-input">Name:</span><input type="text" id="name2">
+            </div>
+            <div class="inputs">
+                <span class="prefix-input">Age: </span><input type="text" id="age2">
+            </div>
+            <div class="inputs" id="submit2">
+                <input type="submit" value="提交">
+            </div>
+        </form>
+    </div>
+    <div class="outputs">
+        <span class="prefix-output">响应:</span><span id="resp2"></span>
     </div>
 </body>
 

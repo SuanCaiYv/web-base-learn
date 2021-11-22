@@ -1,57 +1,53 @@
-let currentTime = document.getElementById("current-time")
+let name1 = document.getElementById("name1")
+let age1 = document.getElementById("age1")
+let submit1 = document.getElementById("submit1")
+let resp1 = document.getElementById("resp1")
 
-// 间隔任务
-setInterval(function() {
-    let time = new Date()
-    currentTime.textContent = "现在是: " + format(time.getHours(), 2) + ":" + format(time.getMinutes(), 2) + ":" + format(time.getSeconds(), 2)
-}, 995)
-
-let start = document.getElementById("start")
-let pause = document.getElementById("pause")
-let reset = document.getElementById("reset")
-let interval = document.getElementById("interval")
-let number = document.getElementById("number")
-let confirm = document.getElementById("confirm")
-let output = document.getElementById("output")
-
-let startTime = 0
-
-start.onclick = function() {
-    startTime = new Date().valueOf()
-    output.textContent = "计时开始"
+// 其实这儿也算一个回调，当按钮被点击会触发回调函数的执行
+submit1.onclick = function () {
+    let input = {
+        "name": name1.value,
+        "age": age1.value
+    }
+    let xhr = new XMLHttpRequest()
+    xhr.open("POST", "http://127.0.0.1:8190/t1", true)
+    xhr.setRequestHeader("Content-Type", "application/json")
+    // 这里使用回调异步，当结果可用，会自动调用这个函数
+    xhr.onload = function (e) {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                resp1.textContent = this.responseText
+            } else {
+                console.error(xhr.statusText);
+            }
+        }
+    }
+    xhr.send(JSON.stringify(input))
 }
 
-pause.onclick = function() {
-    let t = new Date().valueOf() - startTime
-    // 处理时区
-    t -= 8 * 60 * 60 * 1000
-    let time = new Date(t)
-    let str = output.textContent
-    str += "\r\n"
-    str += format(time.getHours(), 2) + ":" + format(time.getMinutes(), 2) + ":" + format(time.getSeconds(), 2) + "." + format(time.getMilliseconds(), 4)
-    output.textContent = str
-}
+let name2 = document.getElementById("name2")
+let age2 = document.getElementById("age2")
+let submit2 = document.getElementById("submit2")
+let resp2 = document.getElementById("resp2")
 
-confirm.onclick = function() {
-    let now = new Date()
-    output.textContent = "现在是: " + format(now.getHours(), 2) + ":" + format(now.getMinutes(), 2) + ":" + format(now.getSeconds(), 2) + "." + format(now.getMilliseconds(), 4)
-    let val = number.value
-    setTimeout(function() {
-        let now = new Date()
-        let text = "时间间隔已到，现在是: " + format(now.getHours(), 2) + ":" + format(now.getMinutes(), 2) + ":" + format(now.getSeconds(), 2) + "." + format(now.getMilliseconds(), 4)
-        let tmp = output.textContent
-        tmp += "\r\n"
-        tmp += text
-        output.textContent = tmp
-    }, val)
-}
-
-reset.onclick = function() {
-    startTime = 0
-    output.textContent = ""
-}
-
-function format(val, size) {
-    let tmp = "00" + val
-    return tmp.substr(tmp.length - size)
+submit2.onclick = function() {
+    let input = {
+        "name": name2.value,
+        "age": age2.value
+    }
+    fetch("http://127.0.0.1:8190/t1", {
+        body: JSON.stringify(input),
+        headers: {
+            'Content-Type': "application/json"
+        },
+        method: 'POST',
+        mode: 'cors'
+    })
+    .then(resp => {
+        return resp.json()
+    })
+    .then(data => {
+        resp2.textContent = JSON.stringify(data)
+    })
+    console.log('run')
 }
