@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEARN-1</title>
+    <link rel="stylesheet" href="./learn1.css">
+    <script async src="./learn1.js"></script>
+</head>
+
+<body>
+    <p>首先我们来了解怎么组织一个表单，以及涉及到哪些组件。</p>
+    <p>表单一般通过form元素进行组织，涉及到的控件均作为form子元素出现。</p>
+    <p>除了这种方式，还有为控件显式指定其所属form的技术，二者本质都是一样的——绑定控件于表单之上。</p>
+    <br>
+    <p>组件彼此之间也是可以分类的，比如说控制类放在一起，选择类放在一起，输入类放在一起。</p>
+    <p>一般使用fieldset和legend来实现，前者做划分，后者做描述</p>
+    <p>我们来看一个例子就好：</p>
+    <form action="" class="form-one">
+        <div class="form-div">
+            <fieldset>
+                <legend>Apple</legend>
+                <div>
+                    <select name="series" id="apple">
+                        <option value="iPhone13">iPhone13</option>
+                        <option value="iPhone12">iPhone12</option>
+                        <option value="iPhone11">iPhone11</option>
+                    </select>
+                </div>
+            </fieldset>
+        </div>
+        <div class="form-div">
+            <fieldset>
+                <legend>XiaoMi</legend>
+                <div>
+                    <select name="series" id="xiaomi">
+                        <option value="Mi11">Mi11</option>
+                        <option value="Mix4">Mix4</option>
+                        <option value="Mix3">Mix3</option>
+                        <option value="MixAlpha">MixAlpha</option>
+                    </select>
+                </div>
+            </fieldset>
+        </div>
+    </form>
+    <br>
+    <p>现在我们来看看如何使用label标签完成和控件的锁定，实现更直观的效果：</p>
+    <form action="" class="form-one">
+        <div>
+            <label for="tmp-id1">用户名: </label>
+            <input type="email" id="tmp-id1">
+        </div>
+        <div>
+            <span>省份: </span>
+            <br>
+            <label for="tmp-id2">江苏</label>
+            <input type="checkbox" id="tmp-id2">
+            <br>
+            <label for="tmp-id3">浙江</label>
+            <input type="checkbox" id="tmp-id3">
+        </div>
+    </form>
+    <p>此时我们可以看到，标签也是可以点击的，此外，不建议对一个组件使用多个标签，最好一个组件一个标签。</p>
+    <p>现在我们来看看一些常见的表单控件：</p>
+    <ul>
+        <li>
+            纯文本格式
+            <br>
+            <input type="text" placeholder="单行文本">
+        </li>
+        <li>
+            邮箱格式(需要在框中输入有效的电子邮件地址)
+            <br>
+            <input type="email">
+        </li>
+        <li>
+            密码格式(默认不现实密码)
+            <br>
+            <input type="password">
+        </li>
+        <li>
+            搜索格式(值可以被自动保存用来在同一站点上的多个页面上自动补全)
+            <br>
+            <input type="search">
+        </li>
+        <li>
+            电话号码格式(并没啥限制，更多是告诉浏览器的)
+            <br>
+            <input type="tel">
+        </li>
+        <li>
+            URL格式(触发网址格式校验)
+            <br>
+            <input type="url">
+        </li>
+        <li>
+            数字格式
+            <br>
+            <input type="number">
+        </li>
+        <li>
+            滑块(无法显示数值，需要使用js实现)
+            <br>
+            <input type="range" id="range" min="0" max="100"><span id="range-out"></span>
+        </li>
+        <li>
+            日期
+            <br>
+            <input type="datetime-local">
+        </li>
+        <li>
+            文件
+            <br>
+            <input type="file">
+        </li>
+        <li>
+            进度条
+            <br>
+            <progress value="60" max="100">60/100</progress>
+        </li>
+        <li>
+            仪表
+            <br>
+            <meter min="0" max="100" low="30" high="80" optimum="20" value="40"></meter>
+        </li>
+        <li>
+            多行文本输入
+            <br>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </li>
+        <li>
+            隐藏内容(发送给服务器但是不显示的内容)
+            <br>
+            <input type="hidden" value="100" name="tmp-name2">
+        </li>
+        <li>
+            下拉选择
+            <br>
+            <select name="" id="">
+                <option value="">aaa</option>
+                <option value="">bbb</option>
+                <option value="">ccc</option>
+            </select>
+        </li>
+        <li>
+            下拉选择(带分组)
+            <br>
+            <select name="" id="">
+                <optgroup label="Apple">
+                    <option value="">aaa</option>
+                    <option value="">bbb</option>
+                    <option value="">ccc</option>
+                </optgroup>
+                <optgroup label="XiaoMi">
+                    <option value="">aaa</option>
+                    <option value="">bbb</option>
+                    <option value="">ccc</option>
+                </optgroup>
+            </select>
+        </li>
+        <li>
+            多选择(按住cmd/ctrl)实现多选
+            <br>
+            <select multiple name="" id="">
+                <option value="">aaa</option>
+                <option value="">bbb</option>
+                <option value="">ccc</option>
+            </select>
+        </li>
+        <li>
+            自动补全输入
+            <br>
+            <input type="text" list="my-data">
+            <datalist id="my-data">
+                <option>Apple</option>
+                <option>Animal</option>
+                <option>Bad</option>
+                <option>But</option>
+            </datalist>
+        </li>
+        <li>
+            复选框
+            <br>
+            <input type="checkbox" value="aaa">
+            <input type="checkbox" value="bbb">
+            <input type="checkbox" value="ccc">
+        </li>
+        <li>
+            单选框(通过name属性划分组)
+            <br>
+            <input type="radio" value="aaa" name="tmp-name1">
+            <input type="radio" value="bbb" name="tmp-name1">
+            <input type="radio" value="ccc" name="tmp-name1">
+        </li>
+        <li>
+            按钮(和input最大的区别在于，可以自定义文本样式)
+            <br>
+            <button type="button">按钮</button>
+            <button type="submit">提交</button>
+            <button type="reset">重置</button>
+            <button type="menu">菜单</button>
+        </li>
+    </ul>
+</body>
+
+</html>
